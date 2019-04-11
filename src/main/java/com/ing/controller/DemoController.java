@@ -14,7 +14,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @RequestMapping("/api")
 public class DemoController {
 	
-	@RequestMapping(value = "/hello", method = RequestMethod.GET)
+	@RequestMapping(value = "/productDetails", method = RequestMethod.GET)
 	public String createAccount() {
 		
 
