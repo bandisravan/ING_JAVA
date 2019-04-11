@@ -39,7 +39,7 @@ public class IngApplicationTests extends AbstractTest {
 	@Test
 	public void getProductTest() throws Exception {
 		String uri = "/api/products";
-		DemoModel review = new DemoModel(101,1);
+		DemoModel review = new DemoModel(9,333);
 		System.out.println("review "+review);
 		String inputJson = super.mapToJson(review);
 
