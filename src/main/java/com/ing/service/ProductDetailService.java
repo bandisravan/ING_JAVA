@@ -46,7 +46,7 @@ public class ProductDetailService {
 		for (int i = 0; i < list.size(); i++) {
 
 			productTemp = (Product) list.get(i);
-		
+
 			if (demo.getProductId() == productTemp.getProductId()) {
 				productId = productTemp.getProductId();
 			}
@@ -76,9 +76,9 @@ public class ProductDetailService {
 		}
 
 		List<Product> productList = productRepository.findAll();
-		
+
 		Map map = new HashMap<>();
-		map.put("groupList", productGroupList);
+		map.put("productGroupList", productGroupList);
 		map.put("productList", productList);
 		return map;
 	}

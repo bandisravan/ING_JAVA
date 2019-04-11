@@ -31,8 +31,7 @@ public class ProductGroup {
 	int products;
 	
 
-	
-	
+
 	public int getProducts() {
 		return products;
 	}

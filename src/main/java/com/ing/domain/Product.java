@@ -7,6 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name="Product")
@@ -23,6 +24,9 @@ public class Product {
 	private Double minLimit;
 	private Double maxLimit;
 	private String duration;
+	
+	
+	
 	
 	
 	
