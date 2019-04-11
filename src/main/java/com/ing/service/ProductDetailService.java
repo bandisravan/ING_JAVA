@@ -46,13 +46,12 @@ public class ProductDetailService {
 		for (int i = 0; i < list.size(); i++) {
 
 			productTemp = (Product) list.get(i);
-			System.out.println("product.getProductId()  " + productTemp.getProductId());
+		
 			if (demo.getProductId() == productTemp.getProductId()) {
 				productId = productTemp.getProductId();
 			}
 		}
 
-		System.out.println("product1 " + product1);
 		int count = product1.getProductViewCount();
 		count = count + 1;
 		product1.setProductViewCount(count);
@@ -72,13 +71,14 @@ public class ProductDetailService {
 
 		for (int i = 0; i < productGroupList.size(); i++) {
 			ProductGroup productGroup = productGroupList.get(i);
+			productGroup.setProducts(productGroup.getProductDetails().size());
 			productGroup.setProductDetails(null);
 		}
 
 		List<Product> productList = productRepository.findAll();
 		
 		Map map = new HashMap<>();
-		map.put("productGroupList", productGroupList);
+		map.put("groupList", productGroupList);
 		map.put("productList", productList);
 		return map;
 	}

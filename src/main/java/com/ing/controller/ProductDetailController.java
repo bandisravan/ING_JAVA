@@ -51,7 +51,7 @@ public class ProductDetailController {
 	
 	
 	@GetMapping("/getGroup")
-	public List<ProductGroup> getGroupDetailsRepository(ProductGroup group) {
+	public List<ProductGroup> getGroupDetails(ProductGroup group) {
 		return getGroupDetailsService.getGroupDetailsService(group);
 
 	}

@@ -23,6 +23,10 @@ public class Product {
 	private Double minLimit;
 	private Double maxLimit;
 	private String duration;
+	
+	
+	
+	
 	public int getProductId() {
 		return productId;
 	}

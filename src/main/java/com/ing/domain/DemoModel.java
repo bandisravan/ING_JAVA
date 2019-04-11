@@ -4,6 +4,13 @@ public class DemoModel {
 
 	int productId;
 	int groupId;
+	
+	
+	public DemoModel(int productId, int groupId) {
+		super();
+		this.productId = productId;
+		this.groupId = groupId;
+	}
 	public int getProductId() {
 		return productId;
 	}
