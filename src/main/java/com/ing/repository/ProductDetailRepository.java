@@ -7,5 +7,7 @@ import com.ing.domain.ProductGroup;
 
 @Repository
 public interface ProductDetailRepository extends JpaRepository<ProductGroup, Integer>{
-	
+
+	ProductGroup findByGroupId(int id);
+
 }

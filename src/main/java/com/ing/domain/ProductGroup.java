@@ -11,6 +11,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table(name ="PRODUCT_GROUP")
@@ -18,26 +19,37 @@ public class ProductGroup {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	Long groupId;
+	int groupId;
 	String groupName;
-	int count;
+	int groupViewCount;
 	
 	@OneToMany(fetch = FetchType.EAGER,cascade= CascadeType.ALL)
 	@JoinColumn(name = "group_id")
-	List<Product> productName;
+	List<Product> productDetails;
 	
-	
+	@Transient
+	int products;
 	
 
-	public int getCount() {
-		return count;
+	
+	
+	public int getProducts() {
+		return products;
 	}
 
-	public void setCount(int count) {
-		this.count = count;
+	public void setProducts(int products) {
+		this.products = products;
 	}
 
-	public ProductGroup(Long groupId) {
+	public int getGroupViewCount() {
+		return groupViewCount;
+	}
+
+	public void setGroupViewCount(int groupViewCount) {
+		this.groupViewCount = groupViewCount;
+	}
+
+	public ProductGroup(int groupId) {
 		super();
 		this.groupId = groupId;
 	}
@@ -46,11 +58,11 @@ public class ProductGroup {
 		super();
 	}
 
-	public Long getGroupId() {
+	public int getGroupId() {
 		return groupId;
 	}
 
-	public void setGroupId(Long groupId) {
+	public void setGroupId(int groupId) {
 		this.groupId = groupId;
 	}
 
@@ -62,12 +74,16 @@ public class ProductGroup {
 		this.groupName = groupName;
 	}
 
-	public List<Product> getProductName() {
-		return productName;
+	public List<Product> getProductDetails() {
+		return productDetails;
 	}
 
-	public void setProductName(List<Product> productName) {
-		this.productName = productName;
+	public void setProductDetails(List<Product> productDetails) {
+		this.productDetails = productDetails;
 	}
+
+	
+
+	
 
 }

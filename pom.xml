@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.example</groupId>
 	<artifactId>INGApplication</artifactId>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>INGApplication</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -63,18 +63,19 @@
 			<version>2.9.2</version>
 		</dependency>
 	</dependencies>
-<distributionManagement>
-  <snapshotRepository>
-    <id>snapshots</id>
-    <url>http://13.234.186.204:8081/nexus/content/repositories/snapshots</url>
-  </snapshotRepository>
-</distributionManagement>
+
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.21.0</version>
+			</plugin>
+			
 		</plugins>
 		
 		 <testResources>

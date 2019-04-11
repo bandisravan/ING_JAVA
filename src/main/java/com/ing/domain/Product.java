@@ -3,61 +3,80 @@ package com.ing.domain;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "product")
+@Table(name="Product")
 public class Product {
 
 	@Id
 	@GeneratedValue
-	private Long productId;
+	private int productId;
 	private String productName;
-	private String productDesc;
 	private int productViewCount;
-
-	
-	
-	
-	public int getProductViewCount() {
-		return productViewCount;
-	}
-
-	public void setProductViewCount(int productViewCount) {
-		this.productViewCount = productViewCount;
-	}
-
-	public Long getProductId() {
+	private Double precentage;
+	private String special;
+	private String investmentType;
+	private Double minLimit;
+	private Double maxLimit;
+	private String duration;
+	public int getProductId() {
 		return productId;
 	}
-
-	public void setProductId(Long productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
-
 	public String getProductName() {
 		return productName;
 	}
-
 	public void setProductName(String productName) {
 		this.productName = productName;
 	}
-
-
-	public String getProductDesc() {
-		return productDesc;
+	public int getProductViewCount() {
+		return productViewCount;
 	}
-
-	public void setProductDesc(String productDesc) {
-		this.productDesc = productDesc;
+	public void setProductViewCount(int productViewCount) {
+		this.productViewCount = productViewCount;
 	}
-
-	public Product() {
-		super();
+	public Double getPrecentage() {
+		return precentage;
 	}
-
-	public Product(Long productId) {
-		super();
-		this.productId = productId;
+	public void setPrecentage(Double precentage) {
+		this.precentage = precentage;
 	}
+	public String getSpecial() {
+		return special;
+	}
+	public void setSpecial(String special) {
+		this.special = special;
+	}
+	public String getInvestmentType() {
+		return investmentType;
+	}
+	public void setInvestmentType(String investmentType) {
+		this.investmentType = investmentType;
+	}
+	public Double getMinLimit() {
+		return minLimit;
+	}
+	public void setMinLimit(Double minLimit) {
+		this.minLimit = minLimit;
+	}
+	public Double getMaxLimit() {
+		return maxLimit;
+	}
+	public void setMaxLimit(Double maxLimit) {
+		this.maxLimit = maxLimit;
+	}
+	public String getDuration() {
+		return duration;
+	}
+	public void setDuration(String duration) {
+		this.duration = duration;
+	}
+	
+	
 }
