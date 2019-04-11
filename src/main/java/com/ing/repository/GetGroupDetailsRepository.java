@@ -7,5 +7,5 @@ import com.ing.domain.ProductGroup;
 
 public interface GetGroupDetailsRepository extends JpaRepository<ProductGroup, Long> {
 
-	ProductGroup findByGroupName(String groupname);
+	
 }
