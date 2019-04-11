@@ -4,7 +4,7 @@ public class DemoModel {
 
 	int productId;
 	int groupId;
-	
+	public DemoModel() {}
 	
 	public DemoModel(int productId, int groupId) {
 		super();
