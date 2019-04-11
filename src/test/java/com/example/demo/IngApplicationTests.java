@@ -75,21 +75,5 @@ public class IngApplicationTests extends AbstractTest {
 	}
 	
 	
-	@Test
-	public void getProductDetailsTest() throws Exception {
-		String uri = "/api/productDetails";
-		DemoModel review = new DemoModel(9,333);
-		String inputJson = super.mapToJson(review);
-
-		MvcResult mvcResult = mvc.perform(
-				MockMvcRequestBuilders.post(uri).contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson))
-				.andReturn();
-		System.out.println(mvcResult.getResponse().getStatus());
-		int status = mvcResult.getResponse().getStatus();
-		assertEquals(200, status);
-		String content = mvcResult.getResponse().getContentAsString();
-//		System.out.println("content  "+content);
-		//Map content1 = super.mapFromJson(content, Map.class);
-		assertNotNull(content);
-	}
+	
 }
